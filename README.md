@@ -6,3 +6,9 @@
 - Bun
 - MongoDB
 - Redis (optional)# bun-bookmark-app
+
+# run on frontend 
+- bun dev
+
+# run on backend 
+- bun run start

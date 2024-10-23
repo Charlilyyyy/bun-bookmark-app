@@ -1,12 +1,18 @@
 <template>
-  <div>
+  <!-- <div>
     <h1>{{ message }}</h1>
-  </div>
+  </div> -->
+  <body data-spy="scroll" data-target="#scroll-spy">
+  <Navbar/>
+  <RouterView />
+</body>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { RouterLink, RouterView } from 'vue-router'
 import axios from 'axios'
+import Navbar from './components/layouts/Navbar.vue';
 
 // Define a ref to store the response message
 const message = ref('Loading...')
@@ -25,4 +31,6 @@ const fetchData = async () => {
 onMounted(() => {
   fetchData()
 })
+
+
 </script>
